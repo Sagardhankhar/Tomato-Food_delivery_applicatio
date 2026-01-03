@@ -1,0 +1,39 @@
+.food-display{
+    background-color:black;
+    color:white;
+    padding:60px 6vw;
+}
+
+/* heading */
+.food-display h1{
+    font-size:32px;
+    font-weight:600;
+    margin-bottom:40px;
+    text-align: center;
+}
+
+/* 🔥 GRID LAYOUT */
+.food-display-list{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap:30px;
+}
+
+/* responsive */
+@media (max-width:1200px){
+    .food-display-list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:768px){
+    .food-display-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:480px){
+    .food-display-list{
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,141 @@
+/* ===== ADD PAGE WRAPPER ===== */
+.add{
+  width: 100%;
+  min-height: calc(100vh - 70px); /* navbar height */
+  background: black;
+  color: white;
+}
+.add{
+  width: 100%;
+  color: white;
+}
+
+.add-form{
+  max-width: 750px;
+  background: #111;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+
+/* PAGE HEADING */
+.add h2{
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: tomato;
+  text-align: center;
+}
+
+/* ===== FORM ===== */
+.add-form{
+  max-width: 750px;
+  background: #111;
+  padding: 30px;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ===== INPUT BLOCK ===== */
+.add-input,
+.add-img-upload{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-input p,
+.add-img-upload p{
+  font-size: 14px;
+  color: #ccc;
+  font-weight: 500;
+}
+
+/* ===== FILE INPUT ===== */
+.add-img-upload input{
+  background: #000;
+  border: 1px dashed #444;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-img-upload input:hover{
+  border-color: tomato;
+}
+
+/* ===== TEXT INPUTS ===== */
+.add input,
+.add textarea,
+.add select{
+  background: #000;
+  border: 1px solid #333;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.add textarea{
+  resize: none;
+  min-height: 120px;
+}
+
+.add input::placeholder,
+.add textarea::placeholder{
+  color: #888;
+}
+
+.add input:focus,
+.add textarea:focus,
+.add select:focus{
+  border-color: tomato;
+  box-shadow: 0 0 0 1px tomato;
+}
+
+/* ===== CATEGORY + PRICE ===== */
+.add-category-price{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ===== BUTTON ===== */
+.add-btn{
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+
+  background: tomato;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover{
+  background: #ff3b1f;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255,99,71,0.4);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px){
+  .add-category-price{
+    grid-template-columns: 1fr;
+  }
+
+  .add h2{
+    font-size: 22px;
+  }
+}

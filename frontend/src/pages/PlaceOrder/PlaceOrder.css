@@ -1,0 +1,151 @@
+.place-order{
+    min-height:80vh;
+    background:black;
+    color:white;
+    padding:50px 6vw;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+/* ===== COMMON CARD STYLE ===== */
+.place-order-left,
+.place-order-right{
+    background:#111;
+    padding:30px;
+    border-radius:16px;
+    transition:all 0.3s ease;
+
+    display:flex;
+    flex-direction:column;     /* content based height */
+}
+
+/* hover like food-item */
+.place-order-left:hover,
+.place-order-right:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 30px rgba(255,99,71,0.25);
+}
+
+/* ===== HEADINGS ===== */
+.place-order-left h2,
+.place-order-right h2{
+    margin-bottom:20px;
+    font-size:22px;
+    font-weight:600;
+}
+
+/* ===== INPUT FORM ===== */
+.place-order-inputs{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+/* width control */
+.place-order-inputs .half{
+    grid-column:span 1;        /* same row */
+}
+
+.place-order-inputs .full{
+    grid-column:span 2;        /* next line full */
+}
+
+/* input style */
+.place-order-inputs input{
+    padding:12px;
+    background:#000;
+    border:1px solid #333;
+    border-radius:8px;
+    color:white;
+    outline:none;
+    transition:all 0.3s ease;
+}
+
+.place-order-inputs input::placeholder{
+    color:#aaa;
+}
+
+.place-order-inputs input:focus{
+    border-color:tomato;
+    box-shadow:0 0 0 1px tomato;
+}
+
+.place-order-inputs input:hover{
+    border-color:#555;
+}
+
+/* ===== ORDER SUMMARY ===== */
+.order-summary{
+    margin-top:10px;
+}
+
+.order-summary div{
+    display:flex;
+    justify-content:space-between;
+    margin:14px 0;
+    font-size:15px;
+}
+
+.order-summary hr{
+    border:none;
+    border-top:1px solid #333;
+    margin:15px 0;
+}
+
+/* total highlight */
+.order-total{
+    font-size:18px;
+    font-weight:600;
+    color:tomato;
+}
+
+/* ===== BUTTON ===== */
+.place-order-right button{
+    margin-top:25px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:tomato;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.place-order-right button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(255,99,71,0.4);
+    background:#ff3b1f;
+}
+
+/* ===== 900px ===== */
+@media (max-width:900px){
+    .place-order{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ===== 750px (MOBILE) ===== */
+@media (max-width:750px){
+    .place-order{
+        padding:35px 4vw;
+    }
+
+    .place-order-inputs{
+        grid-template-columns:1fr;
+    }
+
+    .place-order-inputs .half,
+    .place-order-inputs .full{
+        grid-column:span 1;
+    }
+
+    .place-order-left h2,
+    .place-order-right h2{
+        font-size:20px;
+    }
+}

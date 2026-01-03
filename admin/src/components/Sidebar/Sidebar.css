@@ -1,0 +1,96 @@
+/* ===== SIDEBAR CONTAINER ===== */
+.sidebar{
+    width:240px;
+    min-height:100vh;
+    background:#000;
+    border-right:1px solid #222;
+    padding-top:30px;
+    position:sticky;
+    top:0;
+}
+
+/* ===== OPTIONS WRAPPER ===== */
+.sidebar-options{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    padding:0 20px;
+}
+
+/* ===== SINGLE OPTION ===== */
+.sidebar-option{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:12px 15px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+    color:white;
+    background:#111;
+}
+
+/* icon */
+.sidebar-option img{
+    width:24px;
+    height:24px;
+    object-fit:contain;
+    transition:transform 0.3s ease;
+
+}
+
+/* text */
+.sidebar-option p{
+    font-size:15px;
+    font-weight:500;
+}
+
+/* ===== HOVER EFFECT (FOOD ITEM STYLE) ===== */
+.sidebar-option:hover{
+    background:tomato;
+    transform:translateX(6px);
+    box-shadow:0 8px 20px rgba(255,99,71,0.35);
+}
+
+.sidebar-option:hover img{
+    transform:scale(1.2);
+}
+
+/* ===== ACTIVE STATE (OPTIONAL) ===== */
+.sidebar-option.active{
+    background:tomato;
+    font-weight:600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:900px){
+    .sidebar{
+        width:200px;
+    }
+
+    .sidebar-option p{
+        font-size:14px;
+    }
+}
+
+@media (max-width:750px){
+    .sidebar{
+        width:70px;
+        padding-top:20px;
+    }
+
+    .sidebar-option{
+        justify-content:center;
+    }
+
+    .sidebar-option p{
+        display:none;
+    }
+}
+.sidebar{
+  width: 240px;
+  min-height: calc(100vh - 70px);
+  background: #111;
+  padding: 20px 0;
+}
+

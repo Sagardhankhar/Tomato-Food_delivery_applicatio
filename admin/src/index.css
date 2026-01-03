@@ -1,0 +1,46 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* body */
+body{
+  min-height: 100vh;          /* ✅ spelling fixed */
+  background-color: black;
+  color: white;
+}
+
+/* links */
+a{
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+a:hover{
+  color: tomato;
+}
+
+/* horizontal line */
+hr{
+  border: none;
+  height: 1px;
+  background-color: white;
+  opacity: 0.3;
+}
+
+
+.app-content{
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+}
+
+.page-content{
+  flex: 1;
+  padding: 30px 40px;
+  background: black;
+  overflow-y: auto;
+}

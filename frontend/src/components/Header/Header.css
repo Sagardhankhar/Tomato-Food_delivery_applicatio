@@ -1,0 +1,136 @@
+.header{
+    height:34vw;
+    margin:30px auto;
+    background: url('../../assets/header_img.png') no-repeat center;
+    background-size: contain;
+    position: relative;
+    background-color:black;   /* navbar theme */
+}
+
+/* content container */
+.header-contents{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1.5vw;
+    max-width:50%;
+    bottom:10%;
+    left:6vw;
+    color:white;
+    background:transparent;  
+    animation: fadeIn 3s; 
+}
+
+/* heading */
+.header-contents h2{
+    font-size:3vw;
+    font-weight: 1500;
+    font-style: bold;
+    color:white;               /* neon color */
+    background:transparent;  /* ✅ transparent */
+}
+
+/* paragraph */
+.header-contents p{
+    font-size:1.1vw;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    line-height:1.6;
+    background:transparent;  /* ✅ transparent */
+}
+
+/* button (same as navbar button) */
+.header-contents button{
+    padding:10px 22px;
+    font-weight: 600;
+    background:transparent;
+    border:2px solid white;
+    color:white;
+    border-radius:20px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.header-contents button:hover{
+    font-weight: 800;
+    border-color:white;
+    background:white;
+    color:black;
+}
+/* ===== 1050px ===== */
+@media (max-width:1050px){
+    .header{
+        height:38vw;
+    }
+
+    .header-contents{
+        max-width:55%;
+        left:5vw;
+        bottom:12%;
+    }
+
+    .header-contents h2{
+        font-size:3.5vw;
+    }
+
+    .header-contents p{
+        font-size:1.3vw;
+    }
+}
+
+/* ===== 900px ===== */
+@media (max-width:900px){
+    .header{
+        height:42vw;
+    }
+
+    .header-contents{
+        max-width:65%;
+        left:4vw;
+        bottom:14%;
+    }
+
+    .header-contents h2{
+        font-size:4vw;
+    }
+
+    .header-contents p{
+        font-size:1.6vw;
+    }
+
+    .header-contents button{
+        padding:8px 18px;
+        font-size:14px;
+    }
+}
+
+/* ===== 750px (Mobile) ===== */
+@media (max-width:750px){
+    .header{
+        height:60vw;
+        background-size:cover;
+    }
+
+    .header-contents{
+        max-width:90%;
+        left:5%;
+        bottom:10%;
+        align-items:center;
+        text-align:center;
+    }
+
+    .header-contents h2{
+        font-size:22px;
+    }
+
+    .header-contents p{
+        font-size:14px;
+    }
+
+    .header-contents button{
+        padding:8px 16px;
+        font-size:13px;
+    }
+}

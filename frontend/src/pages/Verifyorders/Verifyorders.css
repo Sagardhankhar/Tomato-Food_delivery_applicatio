@@ -1,0 +1,90 @@
+.verify-container {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.verify-box {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.verify-box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.verify-box p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* 🔄 Spinner */
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #ff4c24;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ✅ Success */
+.verify-success span {
+  font-size: 42px;
+  display: block;
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.verify-success h2 {
+  color: #2e7d32;
+}
+
+/* ❌ Failure */
+.verify-fail span {
+  font-size: 42px;
+  display: block;
+  margin-bottom: 10px;
+  color: #c62828;
+}
+
+.verify-fail h2 {
+  color: #c62828;
+}
+
+/* 🔘 Button */
+.verify-btn {
+  margin-top: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff4c24;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.verify-btn:hover {
+  background-color: #e6431d;
+}

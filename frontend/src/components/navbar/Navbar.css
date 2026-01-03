@@ -1,0 +1,209 @@
+
+/* ===== NAVBAR ===== */
+.navbar{
+    padding:20px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color:black;
+    color:#0ef;
+}
+
+/* LOGO */
+.navbar .logo{
+    width:150px;
+}
+
+/* ===== MENU ===== */
+.navbar-menu{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+/* MENU ITEMS */
+.navbar-items{
+    font-size:22px;
+    color:white;
+    font-weight:500;
+    cursor:pointer;
+    position:relative;
+    transition:all 0.3s ease;
+}
+
+.navbar-items:hover{
+    transform:scale(1.1);
+}
+
+/* underline effect */
+.navbar-items::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:white;
+    transition:width 0.3s ease;
+}
+
+.navbar-items:hover::after{
+    width:100%;
+}
+
+/* ===== RIGHT SECTION ===== */
+.navbar-right{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+/* ICONS */
+.nav-icon{
+    width:22px;
+    cursor:pointer;
+    transition:transform 0.3s ease;
+}
+
+.nav-icon:hover{
+    transform:scale(1.3);
+}
+
+/* CART ICON */
+.navbar-search-icon{
+    position:relative;
+}
+
+/* DOT */
+.dot{
+    position:absolute;
+    top:-8px;
+    right:-8px;
+    width:10px;
+    height:10px;
+    background:red;
+    border-radius:50%;
+}
+
+/* ===== BUTTON ===== */
+.navbar-right button{
+    padding:8px 18px;
+    background:transparent;
+    border:2px solid white;
+    color:white;
+    border-radius:20px;
+    font-size:14px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.navbar-right button:hover{
+    background:white;
+    color:black;
+    font-weight:600;
+}
+
+/* ===== PROFILE SECTION ===== */
+.navbar-proile{
+    position:relative;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+}
+
+/* PROFILE IMAGE (ONLY THIS IS ROUND) */
+.navbar-proile > img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid white;
+    padding:2px;
+    background:black;
+    transition:all 0.3s ease;
+}
+
+.navbar-proile > img:hover{
+    transform:scale(1.1);
+    border-color:tomato;
+}
+
+/* ===== DROPDOWN ===== */
+.nav-profile-dropdown{
+    position:absolute;
+    top:50px;
+    right:0;
+    background:#111;
+    border-radius:10px;
+    width:170px;
+    display:none;
+    flex-direction:column;
+    box-shadow:0 8px 25px rgba(0,0,0,0.6);
+    z-index:10;
+}
+
+/* show dropdown on hover */
+.navbar-proile:hover .nav-profile-dropdown{
+    display:flex;
+}
+
+/* dropdown item */
+.nav-profile-dropdown li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 16px;
+    list-style:none;
+    cursor:pointer;
+    transition:background 0.3s ease;
+}
+
+.nav-profile-dropdown li:hover{
+    background:#222;
+}
+
+/* DROPDOWN ICONS (NOT ROUND) */
+.nav-profile-dropdown li img{
+    width:35px;
+    height:35px;
+    border-radius:0;
+    object-fit:contain;
+}
+
+/* DROPDOWN TEXT */
+.nav-profile-dropdown li p{
+    font-size:14px;
+    color:white;
+    transition:color 0.3s ease, transform 10s ease;
+}
+
+.nav-profile-dropdown li:hover p{
+    color:tomato;
+    transform:translateX(4px);
+}
+
+/* DIVIDER */
+.nav-profile-dropdown hr{
+    border:none;
+    height:1px;
+    background:white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:1050px){
+    .navbar-menu{ gap:15px; }
+    .navbar-items{ font-size:20px; }
+    .navbar .logo{ width:130px; }
+}
+
+@media (max-width:900px){
+    .navbar-menu{ gap:12px; }
+    .navbar-items{ font-size:18px; }
+    .navbar-right{ gap:18px; }
+}
+
+@media (max-width:750px){
+    .navbar-menu{ display:none; }
+    .navbar .logo{ width:120px; }
+    .nav-icon{ width:20px; }
+}

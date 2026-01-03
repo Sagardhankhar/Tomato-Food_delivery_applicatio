@@ -1,0 +1,160 @@
+.explore-menu{
+    background-color:black;
+    color:white;
+    padding:60px 0;
+    text-align:center;
+}
+
+/* heading */
+.explore-menu h1{
+    font-size:36px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+/* description */
+.explore-menu-text{
+    max-width:700px;
+    margin:0 auto 40px;
+    color:#ddd;
+    font-size:16px;
+    line-height:1.6;
+}
+
+/* 🔥 HORIZONTAL SCROLL */
+.explore-menu-list{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;          /* scroll enable */
+    scroll-behavior:smooth;
+    padding:20px 10px;
+}
+
+/* scrollbar style (optional but looks good) */
+.explore-menu-list::-webkit-scrollbar{
+    height:10px;
+}
+
+.explore-menu-list::-webkit-scrollbar-thumb{
+    background:tomato;
+    border-radius:10px;
+}
+
+.explore-menu-list::-webkit-scrollbar-track{
+    background:#222;
+}
+
+/* each item */
+.explore-menu-list-item{
+    min-width:140px;          /* IMPORTANT for scroll */
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+/* image */
+.explore-menu-list-item img{
+    width:120px;
+    border-radius:50%;
+    border:3px solid transparent;
+    transition:all 0.3s ease;
+}
+
+/* hover effect */
+.explore-menu-list-item:hover img{
+    transform:scale(1.1);
+    border-color:tomato;
+}
+
+/* text */
+.explore-menu-list-item p{
+    margin-top:12px;
+    font-size:18px;
+    font-weight:500;
+}
+
+.explore-menu-list-item:hover p{
+    font-weight:600;
+}
+.explore-menu-list-item .active{
+    border:4px solid tomato;
+    padding: 2px;
+}
+/* ===== 1050px ===== */
+@media (max-width:1050px){
+    .explore-menu h1{
+        font-size:32px;
+    }
+
+    .explore-menu-text{
+        font-size:15px;
+    }
+
+    .explore-menu-list{
+        gap:25px;
+    }
+
+    .explore-menu-list-item img{
+        width:110px;
+    }
+}
+
+/* ===== 900px ===== */
+@media (max-width:900px){
+    .explore-menu h1{
+        font-size:28px;
+    }
+
+    .explore-menu-text{
+        font-size:14px;
+        padding:0 20px;
+    }
+
+    .explore-menu-list{
+        gap:20px;
+    }
+
+    .explore-menu-list-item img{
+        width:100px;
+    }
+
+    .explore-menu-list-item p{
+        font-size:16px;
+    }
+}
+
+/* ===== 750px (Mobile) ===== */
+@media (max-width:750px){
+    .explore-menu{
+        padding:40px 0;
+    }
+
+    .explore-menu h1{
+        font-size:24px;
+    }
+
+    .explore-menu-text{
+        font-size:13px;
+        margin-bottom:25px;
+    }
+
+    .explore-menu-list{
+        padding:15px 10px;
+        gap:18px;
+    }
+
+    .explore-menu-list-item{
+        min-width:120px;
+    }
+
+    .explore-menu-list-item img{
+        width:90px;
+    }
+
+    .explore-menu-list-item p{
+        font-size:14px;
+    }
+}
+
